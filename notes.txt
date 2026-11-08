@@ -1,0 +1,6 @@
+Notes For a Developer.
+
+1. this is Node JS project.
+2. IL VAT vaulue = 18%
+3. use git fetch Before pull.
+4. 
