@@ -9,4 +9,8 @@ app.get("/orders/:id/total", (req, res) => {
   res.json({ total: subtotal * (1 + VAT) });
 });
 
+function applyDiscount(total, percent) {
+    return total * (1 - percent / 100);
+  }
+
 app.listen(3000);
