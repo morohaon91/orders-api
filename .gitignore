@@ -1,11 +1,7 @@
-# node_modules
 node_modules/
-
-#env files
 .env
-
-# logs
-logs/
-
-#artifacts
-artifacts/
+*.log
+.DS_Store
+.terraform/
+*.tfstate
+*.tfstate.backup
