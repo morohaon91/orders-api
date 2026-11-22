@@ -21,7 +21,7 @@ jobs:
           ls -la
 
   goodbye:
-    needs: ____
+    needs: info
     runs-on: ubuntu-latest
     steps:
       - run: echo "Runs only after 'info' finished successfully"
