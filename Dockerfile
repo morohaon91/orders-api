@@ -3,9 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-ARG APP_VERSION=dev
-ENV APP_VERSION=$APP_VERSION \
-    PORT=3000
+ENV PORT=3000
 EXPOSE 3000
 USER node
 CMD ["node", "server.js"]
