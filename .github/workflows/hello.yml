@@ -18,7 +18,7 @@ jobs:
           echo "Commit:     ${{ github.sha }}"
           echo "Event:      ${{ github.event_name }}"
           echo "Actor:      ${{ github.actor }}"
-          lss -la
+          ls -la
 
   goodbye:
     needs: info
