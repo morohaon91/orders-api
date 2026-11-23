@@ -22,7 +22,7 @@ jobs:
         run: docker build --build-arg APP_VERSION=${{ github.sha }} -t $IMAGE:${{ github.sha }} .
 
       - name: Run tests inside the image
-        run: ____
+        run: docker run --rm $IMAGE:${{ github.sha }} npm test
 
       - name: Log in to GitHub Container Registry
         if: github.ref == 'refs/heads/main'
@@ -34,4 +34,4 @@ jobs:
           docker tag $IMAGE:${{ github.sha }} $IMAGE:latest
           docker push $IMAGE:${{ github.sha }}
           docker push $IMAGE:latest
-          echo "Pushed: $IMAGE:${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Pushed: $IMAGE:${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY2"
